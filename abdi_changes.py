@@ -1,3 +1,6 @@
+
+
+
 def main():
     print("Shushhhhh")
 
@@ -6,5 +9,5 @@ def james():
 
 if __name__ == "__main__":
     main()
-    
+    james()
     
