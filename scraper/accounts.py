@@ -12,7 +12,8 @@ class User(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     email = Column(String, nullable=False, unique=True)
     username = Column(String, nullable=False, unique=True)
-    password = Column(String, nullable=False)
+    u_pass = Column(String, nullable=False)
+    email_password = Column(String, nullable=False)
 
 def setup_database():
     # Create an SQLite database file named 'users.db'
@@ -25,26 +26,27 @@ def setup_database():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # List of 5 sample user entries
-    users_data = [
-        {'email': 'user1@example.com', 'username': 'user1', 'password': 'pass1'},
-        {'email': 'user2@example.com', 'username': 'user2', 'password': 'pass2'},
-        {'email': 'user3@example.com', 'username': 'user3', 'password': 'pass3'},
-        {'email': 'user4@example.com', 'username': 'user4', 'password': 'pass4'},
-        {'email': 'user5@example.com', 'username': 'user5', 'password': 'pass5'},
-    ]
+    # Check if the users table is empty
+    if not session.query(User).first():
+        users_data = [
+            {'email': 'user1@example.com', 'username': 'user1', 'u_pass': 'pass1', 'email_password': 'pass1'},
+            {'email': 'user2@example.com', 'username': 'user2', 'u_pass': 'pass2', 'email_password': 'pass2'},
+            {'email': 'user3@example.com', 'username': 'user3', 'u_pass': 'pass3', 'email_password': 'pass3'},
+            {'email': 'user4@example.com', 'username': 'user4', 'u_pass': 'pass4', 'email_password': 'pass4'},
+            {'email': 'user5@example.com', 'username': 'user5', 'u_pass': 'pass5', 'email_password': 'pass5'},
+        ]
 
-    # Insert the user records into the database
-    for data in users_data:
-        user = User(email=data['email'], username=data['username'], password=data['password'])
-        session.add(user)
+        # Insert the user records into the database
+        for data in users_data:
+            user = User(email=data['email'], username=data['username'], u_pass=data['u_pass'], email_password=data['email_password'])
+            session.add(user)
   
-    session.commit()
+        session.commit()
 
     # Verify the records have been inserted
     print("Users in the database:")
     for user in session.query(User).all():
-        print(f"id: {user.id}, email: {user.email}, username: {user.username}, password: {user.password}")
+        print(f"id: {user.id}, email: {user.email}, username: {user.username}, username_password: {user.u_pass}, email_password: {user.email_password}")
 
 def get_accounts():
     engine = create_engine('sqlite:///users.db', echo=True)
