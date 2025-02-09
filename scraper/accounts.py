@@ -29,7 +29,7 @@ def setup_database():
     # Check if the users table is empty
     if not session.query(User).first():
         users_data = [
-            {'email': 'user1@example.com', 'username': 'user1', 'u_pass': 'pass1', 'email_password': 'pass1'},
+            {'email': 'abdullahabdullah2104@gmail.com', 'username': 'HoudA3603188522', 'u_pass': '@Bdullah2100', 'email_password': '@Bdullah2100'},
             {'email': 'user2@example.com', 'username': 'user2', 'u_pass': 'pass2', 'email_password': 'pass2'},
             {'email': 'user3@example.com', 'username': 'user3', 'u_pass': 'pass3', 'email_password': 'pass3'},
             {'email': 'user4@example.com', 'username': 'user4', 'u_pass': 'pass4', 'email_password': 'pass4'},
