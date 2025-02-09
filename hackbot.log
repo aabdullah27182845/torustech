@@ -1,2 +1,11 @@
 ERROR    | ❌ Error: No foundry.toml found in /home/abdullahnavid/Documents/cool_stuff/eth-what's your eta i haven't eaten today/proj1!
 ERROR    | ❌ Error: No foundry.toml found in /home/abdullahnavid/Documents/cool_stuff/eth-what's your eta i haven't eaten today/proj1!
+INFO     | ✅ Authentication successful
+INFO     | 
+❌ No [1;31mscope.txt[0m found in your project.
+INFO     | 
+Please choose how you'd like to proceed:
+INFO     | 1) [1;90mLet hackbot automatically generate scope.txt (default)[0m
+INFO     | 2) [1;90mGenerate and customize scope.txt manually[0m
+INFO     | 
+✅ Hackbot done!
