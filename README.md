@@ -14,7 +14,7 @@ Foundry consists of:
 https://book.getfoundry.sh/
 
 ## Usage
-
+[![hackbot](https://github.com/user-attachments/assets/1e385fde-3ee3-482b-9859-5862751e3b47)](https://hackbot.co/dashboard/lead-free-home-week) 
 ### Build
 
 ```shell
@@ -64,3 +64,6 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+
+[![hackbot](https://github.com/user-attachments/assets/1e385fde-3ee3-482b-9859-5862751e3b47)](https://hackbot.co/dashboard/lead-free-home-week) 
